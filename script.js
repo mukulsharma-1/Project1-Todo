@@ -27,8 +27,8 @@ function addTodo(){
 function updateTodoList(){
     todoListUL.innerHTML = "";
     allTodos.forEach((todo, todoIndex)=>{
-        todoItem = createTodoItem(todo, todoIndex),
-        todoListUL.append(todoItem);
+            todoItem = createTodoItem(todo, todoIndex);
+            todoListUL.append(todoItem);   
     })
 }
 
@@ -72,6 +72,6 @@ function saveTodos(){
 }
 
 function getTodos(){
-    const todos = localStorage.getItem("todos" || "[]");
+    const todos = localStorage.getItem("todos") || "[]";
     return JSON.parse(todos);
 }
